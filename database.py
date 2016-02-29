@@ -7,7 +7,7 @@ class DB(object):
     def __init__(self, instance):
         self._connection_string = 'DSN=%s' % (instance)
         self._db_connection = pypyodbc.connect(self._connection_string)
-        #self._db_connection.current_schema = 'marval'
+        #self._db_connection.current_schema = 'myschema'
         self._db_cur = self._db_connection.cursor()
 
     def __enter__(self):
